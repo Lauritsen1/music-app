@@ -1,0 +1,28 @@
+<nav class="nav">
+	<ul class="nav__list">
+		<li class="nav__list-item">
+			<a class="nav__link" href="/">
+				<i class="nav__icon fas fa-folder <%= (typeof page != 'undefined' && page == 'browse' ? 'nav-active' : '') %>"></i>
+				<span class="nav__title <%= (typeof page != 'undefined' && page == 'browse' ? 'nav-active' : '') %>">Browse</span>
+			</a>
+		</li>
+		<li class="nav__list-item">
+			<a class="nav__link" href="/alltracks">
+				<i class="nav__icon fas fa-music <%= (typeof page != 'undefined' && page == 'alltracks' ? 'nav-active' : '') %>"></i>
+				<span class="nav__title <%= (typeof page != 'undefined' && page == 'alltracks' ? 'nav-active' : '') %>">All Tracks</span>
+			</a>
+		</li>
+		<li class="nav__list-item">
+			<a class="nav__link" href="/playlist/1">
+				<i class="nav__icon fas fa-list <%= (typeof page != 'undefined' && page == 'playlist' ? 'nav-active' : '') %>"></i>
+				<span class="nav__title <%= (typeof page != 'undefined' && page == 'playlist' ? 'nav-active' : '') %>">Playlists</span>
+			</a>
+		</li>
+		<li class="nav__list-item">
+			<a class="nav__link" href="/search">
+				<i class="nav__icon fas fa-search <%= (typeof page != 'undefined' && page == 'search' ? 'nav-active' : '') %>"></i>
+				<span class="nav__title <%= (typeof page != 'undefined' && page == 'search' ? 'nav-active' : '') %>">Search</span>
+			</a>
+		</li>
+	</ul>
+</nav>

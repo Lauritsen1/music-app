@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/playlist.css">
+	<title>Playlists</title>
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="header__title">Playlist</h1>
+		<img class="header__profile-pic" src="/img/danielz.jpg">
+	</header>
+	<main>
+		<div class="wrapper">
+			<div class="playlist">
+				<ul class="playlist__list">
+					<% playlists.forEach(playlist => { %>
+					<a href="/playlist/<%- playlist.id %>">
+						<li class="playlist__playlist-item <%= (typeof currentPlaylist != 'undefined' && currentPlaylist == playlist.id ? 'playlist-active' : '') %>"><%- playlist.title %></li>
+					</a>
+					<% }); %>
+				</ul>
+				<ul class="playlist__tracklist">
+					<% playlistTracks.forEach(playlistTrack => { %>
+					<li class="playlist__tracklist-item">
+						<a href="/player/<%- playlistTrack.trackid %>"><span class="playlist__track"><%- playlistTrack.track %></span></a>
+						<span class="playlist__artist"><%- playlistTrack.artist %></span>
+					</li>
+					<% }); %>
+				</ul>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<%- include('partials/nav.ejs') %>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/ab39bcca60.js"></script>
+</body>
+
+</html>

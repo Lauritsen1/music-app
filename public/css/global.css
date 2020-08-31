@@ -1,0 +1,14 @@
+@import url("nav.css");
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+main {
+	margin-bottom: 15vh;
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

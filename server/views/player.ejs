@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/player.css">
+	<title>Document</title>
+</head>
+
+<body>
+	
+	<header class="header">
+		<h1 class="header__title"><a href="/playlist/1"><i class="fas fa-long-arrow-alt-left"></i></a> Player</h1>
+		<img class="header__profile-pic" src="/img/danielz.jpg">
+	</header>
+	<main class="main-player">
+		<div class="wrapper">
+			<div class="player">
+				<img class="player__cover" src="/img/music-cover/<%- playlistTracks.cover %>">
+				<div class="player__track-info">
+					<span class="player__nowplaying">Now Playing</span>
+					<span class="player__track"><%- playlistTracks.track %></span>
+					<span class="player__artist"><%- playlistTracks.artist %></span>
+				</div>
+				<img class="player__audio-spectrum" src="/img/audiospectrum.png">
+				<div class="player__track-time">
+					<span>00:00</span>
+					<span>03:00</span>
+				</div>
+				<div class="player__settings">
+					<i class="fas fa-redo-alt"></i>
+					<i class="fas fa-random"></i>
+				</div>
+				<div class="player__controls-container">
+					<audio src="/audio/killing-time-by-kevin-macleod.mp3"></audio>
+					<input class="audiorange" type="range" value="0">
+					<div class="player__controls">
+						<button class="player__back"><i class="fas fa-step-backward"></i></button>
+						<button class="player__play"><i class="fas fa-play play-pause"></i></button>
+						<button class="player__forward"><i class="fas fa-step-forward"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<%- include('partials/nav.ejs') %>
+	</footer>
+
+	<script src="/js/audio-player.js"></script>
+	<script src="https://kit.fontawesome.com/ab39bcca60.js"></script>
+</body>
+
+</html>

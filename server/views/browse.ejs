@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/browse.css">
+	<title>Browse</title>
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="header__title">Browse</h1>
+		<img class="header__profile-pic" src="img/danielz.jpg">
+	</header>
+	<main class="main">
+		<div class="searchbar-container">
+			<i class="searchbar-icon fas fa-search"></i>
+			<input class="searchbar" type="text" placeholder="Search in store">
+		</div>
+		<div class="hits">
+			<div class="hits__top">
+				<span class="hits__title">Top of the week</span>
+				<span class="hits__more"><a href="">SEE ALL</a></span>
+			</div>
+			<hr>
+			<% tracks.forEach(track => { %>
+			<% if(track.topoftheweek == 1) { %>
+			<a href="/player/<%- track.id %>">
+				<div class="hits__song">
+					<img class="hits__cover" src="img/music-cover/<%- track.cover %>">
+					<div class="hits__container">
+						<div class="hits__info-container">
+							<span class="hits__song-name"><%- track.title %></span>
+							<span class="hits__artist"><%- track.artist %></span>
+						</div>
+						<button class="hits__get">GET</button>
+					</div>
+				</div>
+			</a>
+			<% } %>
+			<% }); %>
+		</div>
+		<div class="hits">
+			<div class="hits__top">
+				<span class="hits__title">All time hits</span>
+				<span class="hits__more"><a href="">SEE ALL</a></span>
+			</div>
+			<hr>
+			<% tracks.forEach(track => { %>
+			<% if(track.alltimehits == 1) { %>
+			<a href="/player/<%- track.id %>">
+				<div class="hits__song">
+					<img class="hits__cover" src="img/music-cover/<%- track.cover %>">
+					<div class="hits__container">
+						<div class="hits__info-container">
+							<span class="hits__song-name"><%- track.title %></span>
+							<span class="hits__artist"><%- track.artist %></span>
+						</div>
+						<button class="hits__get">GET</button>
+					</div>
+				</div>
+			</a>
+			<% } %>
+			<% }); %>
+		</div>
+	</main>
+	<footer>
+		<%- include('partials/nav.ejs') %>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/ab39bcca60.js"></script>
+</body>
+
+</html>

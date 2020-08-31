@@ -1,0 +1,33 @@
+{
+  "name": "music-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lauritsen1/music-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lauritsen1/music-app/issues"
+  },
+  "homepage": "https://github.com/Lauritsen1/music-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "date-and-time": "^0.10.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "express-sessions": "^1.0.6",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

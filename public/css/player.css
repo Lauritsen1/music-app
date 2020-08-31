@@ -1,0 +1,132 @@
+@import url("global.css");
+
+/* HEADER START */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1em 0 1em;
+}
+.header__profile-pic {
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 100%;
+	object-fit: cover;
+}
+.header__title a {
+	color: black;
+}
+/* HEADER SLUT */
+.wrapper {
+	padding: 0 1em 0 1em;
+}
+.player {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.player__cover {
+	border-radius: 50%;
+	height: 10em;
+	width: 10em;
+	margin: 2em 0 2em 0;
+}
+.player__track-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1em;
+}
+.player__nowplaying {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.player__track {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.player__artist {
+	font-size: 0.8em;
+	color: #717171;
+}
+.player__audio-spectrum {
+	width: 100%;
+	height: 4em;
+}
+.player__track-time {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 2em;
+}
+.player__track-time span {
+	font-size: 0.8em;
+	color: #717171;
+}
+.player__controls-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 1em;
+}
+.player__settings {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 0.8em;
+	color: #717171;
+}
+.player__controls {
+	display: flex;
+}
+.player__back {
+	border: none;
+	background-color: transparent;
+}
+.player__play {
+	border: none;
+	background-color: #FE4D6B;
+	border-radius: 50%;
+	height: 3em;
+	width: 3em;
+	margin: 0 0.5em 0 0.5em;
+	color: white;
+}
+.player__forward {
+	border: none;
+	background-color: transparent;
+}
+/* INPUT RANGE START */
+.audiorange {
+    -webkit-appearance: none;
+    width: 35%;
+    height: 5px;
+    border-radius: 5px;
+    background: #FE4D6B;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+​
+.audiorange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FDFDFD;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+​
+.audiorange::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FDFDFD;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+/* INPUT RANGE SLUT */

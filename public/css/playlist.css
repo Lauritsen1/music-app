@@ -1,0 +1,70 @@
+@import url("global.css");
+
+/* HEADER START */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1em 0 1em;
+}
+.header__profile-pic {
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 100%;
+	object-fit: cover;
+}
+/* HEADER SLUT */
+
+/* MAIN START */
+.wrapper {
+	padding: 0 1em 0 1em;
+}
+.playlist__list {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 2em 0;
+	width: 100%;
+	overflow-y: scroll;
+}
+.playlist__list a {
+	text-decoration: none;
+}
+.playlist__playlist-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #FEEFF2;
+	color: #FF4061;
+	height: 5.5em;
+	width: 5.5em;
+	border-radius: 50%;
+	margin-right: 2em;
+}
+.playlist-active {
+	background-color: #FF4061;
+	color: #FEEFF2;
+}
+.playlist__tracklist {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.playlist__tracklist-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.5em;
+}
+.playlist__tracklist-item a {
+	color: black;
+	text-decoration: none;
+}
+.playlist__track {
+	margin-bottom: 0.3em;
+}
+.playlist__artist {
+	font-size: 0.8em;
+	color: #717171;
+}
+/* MAIN SLUT */
