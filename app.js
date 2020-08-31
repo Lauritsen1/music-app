@@ -47,7 +47,7 @@ app.use(express.static('public'));
 
 // start serveren på port 3000 
 const port = 3000;
-app.listen(port, (error) => {
+app.listen(process.env.PORT || port, (error) => {
    if (error) console.log(error);
    console.log('\x1b[35m%s\x1b[0m', '================================================================'); // udskriver en lilla streg i konsol
    console.log('Server is listening on port %s, address: %s', port, 'http://localhost:' + port);
